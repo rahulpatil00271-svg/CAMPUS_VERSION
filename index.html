@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Campus Explorer: discover clubs, events and student resources.">
+<title>Campus Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="#home"><i data-lucide="compass"></i> Campus Explorer</a>
+  <button id="menuBtn" class="icon-btn" aria-label="Toggle menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+  <nav id="nav" aria-label="Main">
+    <a href="#home">Home</a><a href="#clubs">Clubs</a><a href="#events">Events</a><a href="#resources">Resources</a><a href="#about">About</a>
+    <a class="btn small" href="#clubs">Explore Campus</a><a class="adm-link" href="#admin"><i data-lucide="settings"></i> Admin</a>
+  </nav>
+</header>
+
+<div id="siteView">
+<main id="main">
+  <section id="home" class="hero">
+    <div>
+      <h1 id="heroTitle"></h1><p id="heroText" class="lead"></p>
+      <div class="searchbox"><i data-lucide="search"></i>
+        <input id="search" type="search" placeholder="Search clubs, events and resources…" aria-label="Search" autocomplete="off">
+        <button id="clearSearch" class="icon-btn" aria-label="Clear search" hidden><i data-lucide="x"></i></button></div>
+      <div class="acts"><a class="btn" href="#clubs">Explore Clubs</a><a class="btn alt" href="#events">Explore Events</a></div>
+      <div class="stats" id="heroStats"></div>
+    </div>
+    <div id="heroMedia" class="hero-media"></div>
+  </section>
+  <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  <section id="clubs"><h2>Explore campus clubs</h2><div id="clubGrid" class="grid"></div></section>
+  <section id="events"><h2>Upcoming events &amp; workshops</h2><p class="note">Events marked Demo are illustrative, not officially organised or confirmed.</p><div id="eventGrid" class="grid"></div></section>
+  <section id="resources"><h2>Student resources</h2><div id="resGrid" class="grid"></div></section>
+  <section id="about"><h2>About</h2><p id="aboutText" class="lead"></p></section>
+</main>
+</div>
+
+<div id="adminView" hidden><main class="admin"><div id="adminBody"></div></main></div>
+
+<footer class="foot"><p>Campus Explorer is a frontend demonstration project. Sample content is not official college information.</p><p id="footLinks"></p></footer>
+<dialog id="modal" aria-labelledby="mTitle"><div id="modalBody"></div><button class="icon-btn close" id="modalClose" aria-label="Close dialog"><i data-lucide="x"></i></button></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
